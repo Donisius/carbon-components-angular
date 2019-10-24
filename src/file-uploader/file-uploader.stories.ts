@@ -30,7 +30,8 @@ import { NotificationService } from "../notification/notification.service";
 			[multiple]="multiple"
 			[skeleton]="skeleton"
 			[(files)]="files"
-			[size]="size">
+			[size]="size"
+			(filesChange)="onFilesChange($event)">
 		</ibm-file-uploader>
 
 		<div [id]="notificationId" style="width: 300px; margin-top: 20px"></div>
@@ -57,6 +58,10 @@ class FileUploaderStory {
 
 	constructor(protected notificationService: NotificationService) {
 		FileUploaderStory.notificationCount++;
+	}
+
+	onFilesChange(event) {
+		console.log(event);
 	}
 
 	onUpload() {
