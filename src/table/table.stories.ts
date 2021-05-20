@@ -230,7 +230,7 @@ storiesOf("Components|Table", module).addDecorator(
 					[sortable]="sortable"
 					[skeleton]="skeleton"
 					[stickyHeader]="stickyHeader"
-					[isDataGrid]="isDataGrid">
+					[isDataGrid]="true">
 				</app-table>
 				<ng-template #customTrigger><svg ibmIconSettings size="16"></svg></ng-template>
 			</ibm-table-container>
